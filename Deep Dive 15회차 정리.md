@@ -144,7 +144,7 @@ arguments 객체의 Symbol(Symbol.iterator) 프로퍼티는 arguments 객체를 
 ### hasOwnProperty 메서드
 객체 고유의 프로퍼티 키일 경우 true를 반환, 상속받은 프로토타입의 키일 경우 false를 반환.
 
-### protptype 프로퍼티
+### prototype 프로퍼티
 생성자 함수로 호출할 수 있는 함수 객체만이 갖는 프로퍼티. 즉 constructor만이 소유하는 프로퍼티이다.
 일반 객체와 생성자 함수로 호출할 수 없는 메서드,화살표함수 같은 non-constructor에는 없는 프로퍼티이다.
 
