@@ -651,3 +651,15 @@ console.log(str.toUpperCase()); // HELLO
 4. 서브클래스는 별도 인스턴스 생성X, 그대로 받아 사용
 => 서브클래스 constructor는 super 호출 이후 처리해야함!
 
+## 26장: ES6 함수의 추가 기능
+
+### 일반함수 - 함수 선언문, 표현식 
+### 메서드 - 메서드 축약표현으로 정의된 함수(프로퍼티로 전달된 함수는 메서드X)
+  - non-constructor -> 생성자함수X -> 인스턴스 생성X -> 프로토타입 프로퍼티X
+  - super 참조를 위해 자신을 바인딩한 객체 가리키는 `[[homeobject]]`를 가지고 있음
+### 화살표 함수
+  - 함수 표현식으로만 정의
+  - this 문제 해결
+  - non-constructor -> 인스턴스X, 프로토타입 프로퍼티X
+  - this, arguments, super, new.target 바인딩X -> 상위 스코프를 참조
+    - 화살표 함수로 메서드정의 하지 말자 -> this가 전역이 되기 때문에
