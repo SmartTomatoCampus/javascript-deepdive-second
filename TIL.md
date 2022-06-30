@@ -760,3 +760,24 @@ console.log(str.toUpperCase()); // HELLO
   
   - findIndex()
     - 콜백 함수 반환값이 true인 첫번째 요소 인덱스 반환 없으면 -1
+
+# 28장: Number
+
+## new Number의 인수는 number 래퍼객체가 생성됨
+  - > 래퍼객체: 문자열, 숫자, 불리언 값에 대해 객체처럼 접근하면 생성되는 임시객체
+  - Number로 인수의 값은 숫자로 강제변환되어 `[[NumberData]]` 슬롯에 할당된 Number 래퍼객체가 생성
+
+## Number 프로퍼티
+  - Number.EPSILON
+    - 1과 1보다 큰 숫자 중에서 가장 작은 숫자와의 차이
+    - > 부동소수점: 실수를 컴퓨터상에서 근사하여 표현하는 방식
+  
+  
+## 메서드
+  - Number.isNaN -> 암묵적 타입변환(X)
+  - .isNaN -> 암묵적 타입변환(O, 인수를 숫자로 바꿈)
+  - Number.toExponential -> 숫자를 지수표기법으로 문자열로 반환
+  - 숫자뒤에 '.' 의 의미
+    - 부동소수점 
+    - 소수 구분 기호 
+    => 괄호나 공백 뒤 .을 입력
