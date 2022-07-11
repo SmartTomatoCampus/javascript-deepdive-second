@@ -1006,3 +1006,17 @@ console.log(str.toUpperCase()); // HELLO
   const user = { firstName: 'Elon', lastName: 'Musk' }
   const { lastName, firstName } = user
   ```
+
+# 37장: Set
+
+- 중복되지 않는 유일한 값의 집합! - 수학적 집합 구현을 위한 자료구조
+  - 교집합, 합집합, 차집합, 여집합 등을 구현할 수 있다!
+- 배열과 유사 but -> 중복X, 순서 의미X, 인덱스 접근X
+
+# 38장: map
+
+- 키와 값의 쌍으로 이루어진 컬렉션
+- 객체와 유사 but -> 이터러블O, 요소 개수 확인 - Map.size, key 타입 제한X
+- new Map(이터러블) -> 인수 이터러블은 키와 쌍으로 이루어진 요소 => Map 객체 생성
+- 중복된 값 인수로X
+- Map 객체는 이터러블 -> for ...of, 스프레드, 배열 디스트럭처링
