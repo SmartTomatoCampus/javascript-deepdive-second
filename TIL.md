@@ -1062,3 +1062,21 @@ console.log(str.toUpperCase()); // HELLO
 
     1. aysnc 어트리뷰트 - html, js 비동기 로드 -> js로드 완료시 js 실행
     2. defer 어트리뷰트 - html, js 비동기 로드 -> html 파싱 완료후 js 실행
+
+# 39장: DOM
+
+- 인라인 스타일 조작
+
+  - 요소.style을 통해 접근 가능
+  - style 참조시 CSSSyleDeclaration 객체를 반환 -> CSS 프로퍼티를 가지고 있어 스타일 변경 가능
+  - CSS 프로퍼티는 케밥케이스 / CSSSyleDeclaration은 카멜 케이스를 따른다.
+
+- 클래스 조작
+
+  - className -> 클래스 어트리뷰트 값 취득 or 변경
+  - classList -> class 어트리뷰트 정보를 담은 DOMTokenList 객체 반환
+    - 유사배열 && 이터러블 -> 다양한 메서드 제공
+
+- 요소에 적용된 스타일 참조
+  - .getComputedStyle -> 요소에 평가된 스타일을 CSSStyleDeclaration 객체에 담아 반환
+    - 가상요소 선택자를 지정할 수 있음
