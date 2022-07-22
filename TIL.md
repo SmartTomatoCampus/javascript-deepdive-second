@@ -1204,3 +1204,24 @@ console.log(str.toUpperCase()); // HELLO
     -> 비동기 함수의 콜백 함수 혹은 이벤트 핸들러가 임시로 보관되는 장소(대기장소)
 
 => JS(싱글)와 브라우저(멀티)가 협력하여 비동기 함수 실행!
+
+# 43장 JSON
+
+> Ajax
+
+- 브라우저와 서버간 데이터 통신하여 동적으로 웹페이지를 갱신하는 프로그래밍 방식
+
+> JSON
+
+- 클라이언트와 서버간 HTTP 통신을 위한 **텍스트 데이터 포맷**
+- 관련 메서드
+  - JSON.stringify -> 객체를 JSON 포맷 문자열로 반환
+  - JSON.parse -> JSON 포맷 문자열을 객체로 반환
+
+> XMLHttpRequest
+
+- JS를 통해 HTTP 요청을 하기위한 객체
+- 통신을 위한 다양한 메서드와 프로퍼티 제공
+- HTTP 요청 전송
+  - XMLHttpRequest 생성 -> 객체.open()로 HTTP 요청 초기화 -> 객체.setRequestHeader()로 HTTP 요청 헤더 설정 -> 객체.send()로 HTTP 요청 전송
+  - HTTP 요청 메서드 - 클라이언트가 서버에게 요청의 종류와 목적을 알리는 방법!
