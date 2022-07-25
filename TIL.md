@@ -1205,7 +1205,7 @@ console.log(str.toUpperCase()); // HELLO
 
 => JS(싱글)와 브라우저(멀티)가 협력하여 비동기 함수 실행!
 
-# 43장 JSON
+# 43장 AJAX
 
 > Ajax
 
@@ -1225,3 +1225,20 @@ console.log(str.toUpperCase()); // HELLO
 - HTTP 요청 전송
   - XMLHttpRequest 생성 -> 객체.open()로 HTTP 요청 초기화 -> 객체.setRequestHeader()로 HTTP 요청 헤더 설정 -> 객체.send()로 HTTP 요청 전송
   - HTTP 요청 메서드 - 클라이언트가 서버에게 요청의 종류와 목적을 알리는 방법!
+
+# # 44장: Rest API
+
+- 2000년 로이 필딩이 논문에 처음 소개
+  - -> 당시 웹이 HTTP를 제대로 활용하지 못하고 있었음
+  - -> HTTP를 잘 활용할 수 있는 형태(구조)를 제공
+- Rest: HTTP를 기반으로 클라이언트가 서버의 리소스에 접근하는 방식을 규정한 아키텍처(구조)
+
+- 구성
+
+  - 자원 -> URI
+  - 행위 -> 메서드
+  - 표현 -> 페이로드
+
+- 설계 원칙
+  - URI는 리소스 표현 -> 명사를 사용
+  - 리소스에 대한 행위 -> GET, POST, PUT, PATCH, DELETE
