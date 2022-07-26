@@ -1226,7 +1226,7 @@ console.log(str.toUpperCase()); // HELLO
   - XMLHttpRequest 생성 -> 객체.open()로 HTTP 요청 초기화 -> 객체.setRequestHeader()로 HTTP 요청 헤더 설정 -> 객체.send()로 HTTP 요청 전송
   - HTTP 요청 메서드 - 클라이언트가 서버에게 요청의 종류와 목적을 알리는 방법!
 
-# # 44장: Rest API
+# 44장: Rest API
 
 - 2000년 로이 필딩이 논문에 처음 소개
   - -> 당시 웹이 HTTP를 제대로 활용하지 못하고 있었음
@@ -1242,3 +1242,19 @@ console.log(str.toUpperCase()); // HELLO
 - 설계 원칙
   - URI는 리소스 표현 -> 명사를 사용
   - 리소스에 대한 행위 -> GET, POST, PUT, PATCH, DELETE
+
+# 45장: 프로미스
+
+- 비동기 처리 단점
+  - 콜백 패턴 -> 콜백 지옥
+  - 에러 처리 곤란 -> 비동기 처리 결과 외부 반환X, 상위 스코프 변수 할당X
+
+> 프로미스
+
+- 비동기 처리 상태와 처리 결과를 관리하는 객체
+- new Promise로 프로미스 객체 생성
+- resolve, reject 인수를 받음
+- 비동기 성공시 -> resolve 함수 실행 -> promise를 fulfilled 상태로 변경
+- 비동기 실패시 -> reject 함수 실행 -> promisefmf rejected 상태로 변경
+- 비동기 처리 결과도 가지고 있음
+- 후속 처리 메서드 -> .then, .catch, .finally
