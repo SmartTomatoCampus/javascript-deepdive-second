@@ -1258,3 +1258,29 @@ console.log(str.toUpperCase()); // HELLO
 - 비동기 실패시 -> reject 함수 실행 -> promisefmf rejected 상태로 변경
 - 비동기 처리 결과도 가지고 있음
 - 후속 처리 메서드 -> .then, .catch, .finally
+
+> 프로미스 체이닝
+
+- then, catch, finally 후속 처리 메서드는 언제나 promise를 반환 하기 때문에 후속 처리 메서드를 연속으로 쓸 수 있음
+- 후속 처리 메서드의 콜백함수는 프로미스의 비동기 처리 상태가 변경되면 선택적으로 호출됨
+
+> 프로미스 정적 메서드
+
+- Promise.resolve/reject -> 값을 래핑하여 promise값 생성
+- Promise.all -> 비동기 병렬처리 - 순서대로
+- Promise.race -> 가장 먼저 fulfilled된 프로미스를 반환
+- Promise.allSettled -> 모드 settled 상태가 되면 처리 결과를 배열로 반환
+
+> 마이크로태스크 큐
+
+- 프로미스 후속 처리 메서드는 마이크로태스크 큐에 임시 저장됨
+- 다름 함수 혹은 이벤트 핸들러가 임시 저장되는 태스크 큐 보다 빠르게 처리됨(우선순위가 높음)
+
+> fetch
+
+- HTTP 응답을 나타내는 response객체를 래핑한 promise 객체 반환
+- 응답 body를 얻으려면 response.json()을 통해 얻을 수 있음
+  - 응답 body를 얻어 역직렬화해서 반환
+- fetch 에러 처리
+  - 에러가 발생시 response.ok의 불리언 값을 false로 설정함
+  - response.ok로 에러처리 해야함
