@@ -1284,3 +1284,33 @@ console.log(str.toUpperCase()); // HELLO
 - fetch 에러 처리
   - 에러가 발생시 response.ok의 불리언 값을 false로 설정함
   - response.ok로 에러처리 해야함
+
+# 46장: 제너레이터와 async/await
+
+- 제너레이터: 코드 블록의 실행을 일시 중지했다가 다시 재개 할 수 있는 특수 함수
+  - function\* 로 정의
+  - 함수 호출자에게 함수 실행 제어권 양도
+  - 호출자와 함수 상태 주고 받음
+  - 제너레이터 객체를 반환
+    - 이터러블 & 이터레이터
+      - 이터러블 -> Symbol.iterator 메서드 상속
+      - 이터레이터 -> 이터레이터 리절트객체(value, done), next() 메서드
+
+> 일시중지, 재개
+
+- yield 키워드
+
+  - 함수 실행 일시 중지
+  - yield 뒤 표현식 결과를 제너레이터 함수 호출자에게 반환
+
+- next() 메서드 실행 -> yield 표현식까지 실행하고 일시중지
+
+  - 함수 제어권이 함수 호출자로 양도됨
+
+- async/await
+  - 동기처럼 프로미스 사용 가능
+  - async
+    - 언제나 프로미스 반환
+    - await는 반드시 async 안에서만 사용
+  - await
+    - 프로미스가 settled가 될 때 까지 대기하고 resolve 처리 한 결과를 반환
